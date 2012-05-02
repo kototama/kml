@@ -120,9 +120,6 @@ sexpr_t* eval(sexpr_t* sexpr, sexpr_t** env, sexpr_list_t* roots, error_t** erro
                 if(*error != NULL) {
                     return NULL;
                 }
-                if(e1 == NULL) {
-                    printf("ERRROROROR\n");
-                }
                 if(e1 == interp.nil_sym) {
                     return eval(CAR(CDR(CDR(CDR(sexpr)))), env, roots, error);
                 } else {
@@ -303,10 +300,6 @@ sexpr_t* eval(sexpr_t* sexpr, sexpr_t** env, sexpr_list_t* roots, error_t** erro
                 roots = cons_to_roots_list(roots, eval_env);
                 sexpr_t* transformed_code = eval(macro_code, &eval_env, roots, error);
 
-                printf("tr code=\n");
-                print_sexpr(transformed_code);
-                printf("\n");
-                
                 if(*error != NULL) {
                     return NULL;
                 }
