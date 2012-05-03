@@ -38,7 +38,7 @@ Some errors checking is done but not everywhere.
 THINGS I LEARNED
 ----------------
 
-- LIST stands not for LISt Processing but for LISt Processor.
+- LISP stands not for LISt Processing but for LISt Processor.
 - Programming in C is as painful as it used to be. Clang makes its slighly better.
 - It's hard to abstract patterns of code in C. You feel the pain, even on a small project like this.
 - apply can be implemented as a normal function on top of eval.
